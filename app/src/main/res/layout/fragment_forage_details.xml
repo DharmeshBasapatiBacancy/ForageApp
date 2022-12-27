@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_15sdp"
+    tools:context=".view.fragment.ForgeDetailsFragment">
+
+    <TextView
+        android:id="@+id/forageNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Wild Gooseberry"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/forageLocationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:gravity="center"
+        android:text="Mountain View"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_baseline_location_on_24"
+        app:drawableTint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/forageNameTextView" />
+
+    <View
+        android:id="@+id/viewOne"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/forageLocationTextView" />
+
+    <TextView
+        android:id="@+id/forageSeasonTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:gravity="center"
+        android:text="Currently in season"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_baseline_calendar_month_24"
+        app:drawableTint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewOne" />
+
+    <View
+        android:id="@+id/viewTwo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/forageSeasonTextView" />
+
+    <TextView
+        android:id="@+id/forageNotesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:gravity="center"
+        android:text="Some Notes on Forage"
+        android:textSize="@dimen/_12ssp"
+        android:textStyle="bold"
+        app:drawableStartCompat="@drawable/ic_baseline_notes_24"
+        app:drawableTint="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTwo" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

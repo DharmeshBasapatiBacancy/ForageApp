@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/foragge_nav_graph"
+    app:startDestination="@id/forageListFragment">
+
+    <fragment
+        android:id="@+id/forageListFragment"
+        android:name="com.kudos.forageapp.view.fragment.ForgeListFragment"
+        android:label="Forage List"
+        tools:layout="@layout/fragment_forage_list">
+        <action
+            android:id="@+id/action_forgeListFragment_to_forgeDetailsFragment"
+            app:destination="@id/forageDetailsFragment" />
+        <action
+            android:id="@+id/action_forgeListFragment_to_addUpdateForgeFragment"
+            app:destination="@id/addUpdateForageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forageDetailsFragment"
+        android:name="com.kudos.forageapp.view.fragment.ForgeDetailsFragment"
+        android:label="Forage Details"
+        tools:layout="@layout/fragment_forage_details" >
+        <argument
+            android:name="forageId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_forageDetailsFragment_to_addUpdateForageFragment"
+            app:destination="@id/addUpdateForageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addUpdateForageFragment"
+        android:name="com.kudos.forageapp.view.fragment.AddUpdateForgeFragment"
+        android:label="Add/Update Forage"
+        tools:layout="@layout/fragment_add_update_forage" >
+        <argument
+            android:name="isEdit"
+            app:argType="boolean" />
+        <argument
+            android:name="forageId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
